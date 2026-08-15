@@ -7,11 +7,7 @@ import { DashboardShell } from "@/components/layout/dashboard-shell";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  knowledgeBase,
-  knowledgeCategories,
-  type KnowledgeCategory,
-} from "@/data/knowledge-base";
+import { knowledgeBase, knowledgeCategories, type KnowledgeCategory } from "@/data/knowledge-base";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/knowledge-base")({
@@ -51,8 +47,7 @@ function KnowledgeBasePage() {
     });
   }, [query, category]);
 
-  const selected =
-    filtered.find((article) => article.id === selectedId) ?? filtered[0] ?? null;
+  const selected = filtered.find((article) => article.id === selectedId) ?? filtered[0] ?? null;
 
   return (
     <DashboardShell

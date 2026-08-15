@@ -181,11 +181,21 @@ function AnalyticsPage() {
             <table className="w-full min-w-[38rem] text-sm">
               <thead>
                 <tr className="text-left text-xs tracking-wide text-muted-foreground uppercase">
-                  <th scope="col" className="px-5 py-3 font-medium">Question</th>
-                  <th scope="col" className="px-5 py-3 font-medium">Category</th>
-                  <th scope="col" className="px-5 py-3 font-medium">Status</th>
-                  <th scope="col" className="px-5 py-3 font-medium">Response</th>
-                  <th scope="col" className="px-5 py-3 font-medium">When</th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Question
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Category
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Status
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Response
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    When
+                  </th>
                 </tr>
               </thead>
               <tbody>

@@ -45,8 +45,8 @@ function SettingsPage() {
             <div>
               <h2 className="text-sm font-semibold tracking-tight">Language model</h2>
               <p className="mt-1 text-sm text-muted-foreground">
-                The agent calls the model through a server function, so the API key never reaches the
-                browser.
+                The agent calls the model through a server function, so the API key never reaches
+                the browser.
               </p>
             </div>
             <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">

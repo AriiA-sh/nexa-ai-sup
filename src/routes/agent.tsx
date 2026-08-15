@@ -20,7 +20,8 @@ export const Route = createFileRoute("/agent")({
       { property: "og:title", content: "AI Support Agent — Nexa Demo" },
       {
         property: "og:description",
-        content: "A grounded AI support chat demo with conversation history and demo fallback mode.",
+        content:
+          "A grounded AI support chat demo with conversation history and demo fallback mode.",
       },
     ],
   }),

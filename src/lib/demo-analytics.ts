@@ -42,10 +42,52 @@ export const categoryBreakdown = [
 ];
 
 export const recentConversations: RecentConversation[] = [
-  { id: "c-9821", question: "How long does a refund take to arrive?", category: "Refunds", status: "Resolved", responseMs: 1180, at: "2 min ago" },
-  { id: "c-9820", question: "My password reset link expired", category: "Security", status: "Resolved", responseMs: 940, at: "14 min ago" },
-  { id: "c-9819", question: "Can I switch to annual billing mid-cycle?", category: "Billing", status: "Resolved", responseMs: 1620, at: "38 min ago" },
-  { id: "c-9818", question: "Do you support on-premise deployment?", category: "Technical", status: "Escalated", responseMs: 2110, at: "1 hr ago" },
-  { id: "c-9817", question: "Where is my hardware add-on parcel?", category: "Shipping", status: "Resolved", responseMs: 1275, at: "2 hr ago" },
-  { id: "c-9816", question: "How do I add a VAT ID to invoices?", category: "Billing", status: "Deflected", responseMs: 1030, at: "3 hr ago" },
+  {
+    id: "c-9821",
+    question: "How long does a refund take to arrive?",
+    category: "Refunds",
+    status: "Resolved",
+    responseMs: 1180,
+    at: "2 min ago",
+  },
+  {
+    id: "c-9820",
+    question: "My password reset link expired",
+    category: "Security",
+    status: "Resolved",
+    responseMs: 940,
+    at: "14 min ago",
+  },
+  {
+    id: "c-9819",
+    question: "Can I switch to annual billing mid-cycle?",
+    category: "Billing",
+    status: "Resolved",
+    responseMs: 1620,
+    at: "38 min ago",
+  },
+  {
+    id: "c-9818",
+    question: "Do you support on-premise deployment?",
+    category: "Technical",
+    status: "Escalated",
+    responseMs: 2110,
+    at: "1 hr ago",
+  },
+  {
+    id: "c-9817",
+    question: "Where is my hardware add-on parcel?",
+    category: "Shipping",
+    status: "Resolved",
+    responseMs: 1275,
+    at: "2 hr ago",
+  },
+  {
+    id: "c-9816",
+    question: "How do I add a VAT ID to invoices?",
+    category: "Billing",
+    status: "Deflected",
+    responseMs: 1030,
+    at: "3 hr ago",
+  },
 ];

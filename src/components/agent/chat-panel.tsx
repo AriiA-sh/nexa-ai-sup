@@ -239,7 +239,10 @@ export function ChatPanel({ demoMode }: ChatPanelProps) {
                   </p>
                   {message.error ? (
                     <p className="flex items-start gap-2 text-sm">
-                      <AlertTriangle className="mt-0.5 size-4 shrink-0 text-destructive" aria-hidden="true" />
+                      <AlertTriangle
+                        className="mt-0.5 size-4 shrink-0 text-destructive"
+                        aria-hidden="true"
+                      />
                       {message.content}
                     </p>
                   ) : (

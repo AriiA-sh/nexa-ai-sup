@@ -1,11 +1,5 @@
 export type KnowledgeCategory =
-  | "Account"
-  | "Security"
-  | "Billing"
-  | "Refunds"
-  | "Technical"
-  | "Shipping"
-  | "Contact";
+  "Account" | "Security" | "Billing" | "Refunds" | "Technical" | "Shipping" | "Contact";
 
 export interface KnowledgeArticle {
   id: string;
