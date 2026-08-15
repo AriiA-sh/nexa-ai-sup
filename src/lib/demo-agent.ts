@@ -24,7 +24,7 @@ export function answerFromDemoEngine(question: string): AgentAnswer {
     };
   }
 
-  const best = matches[0].article;
+  const best = matches[0]!.article;
   const body = best.content
     .split("\n")
     .filter((line) => line.trim().length > 0)
@@ -34,7 +34,7 @@ export function answerFromDemoEngine(question: string): AgentAnswer {
     `Here is what the knowledge base says about **${best.title.toLowerCase()}**:`,
     "",
     body,
-    matches.length > 1 ? `\n_Related article: ${matches[1].article.title}._` : "",
+    matches.length > 1 ? `\n_Related article: ${matches[1]!.article.title}._` : "",
   ]
     .filter(Boolean)
     .join("\n");
