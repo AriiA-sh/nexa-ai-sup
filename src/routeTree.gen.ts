@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AgentRouteImport } from './routes/agent'
+import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as KnowledgeBaseRouteImport } from './routes/knowledge-base'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const AgentRoute = AgentRouteImport.update({
   path: '/agent',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnalyticsRoute = AnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KnowledgeBaseRoute = KnowledgeBaseRouteImport.update({
   id: '/knowledge-base',
   path: '/knowledge-base',
@@ -32,30 +38,34 @@ const KnowledgeBaseRoute = KnowledgeBaseRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/agent': typeof AgentRoute
+  '/analytics': typeof AnalyticsRoute
   '/knowledge-base': typeof KnowledgeBaseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/agent': typeof AgentRoute
+  '/analytics': typeof AnalyticsRoute
   '/knowledge-base': typeof KnowledgeBaseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/agent': typeof AgentRoute
+  '/analytics': typeof AnalyticsRoute
   '/knowledge-base': typeof KnowledgeBaseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/agent' | '/knowledge-base'
+  fullPaths: '/' | '/agent' | '/analytics' | '/knowledge-base'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/agent' | '/knowledge-base'
-  id: '__root__' | '/' | '/agent' | '/knowledge-base'
+  to: '/' | '/agent' | '/analytics' | '/knowledge-base'
+  id: '__root__' | '/' | '/agent' | '/analytics' | '/knowledge-base'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AgentRoute: typeof AgentRoute
+  AnalyticsRoute: typeof AnalyticsRoute
   KnowledgeBaseRoute: typeof KnowledgeBaseRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AgentRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/analytics': {
+      id: '/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/knowledge-base': {
       id: '/knowledge-base'
       path: '/knowledge-base'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AgentRoute: AgentRoute,
+  AnalyticsRoute: AnalyticsRoute,
   KnowledgeBaseRoute: KnowledgeBaseRoute,
 }
 export const routeTree = rootRouteImport
